@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/HospitalDashboard/css/complaints/complaints.css' %}">
+    <title>Complaint page</title>
+</head>
+<body>
+    {% include 'HospitalDashboard/hospitalHeader.html' %}
+    <h3 id="grievance-complaint">Grievance and Complaint</h3>
+    <section id="whole-content">
+        <section class="left-right" id="doctors-complaints">
+            <h3 id="complaint-header">Complaint on Doctors</h3>
+            <div id="complaint-info-list">
+                {% ifequal complaint_length 0%}
+                <div  class="no-complaint-registered">
+                    <h1>No Complaint Registered.</h1>
+                </div>
+                {% endifequal %}
+                {% for complaint in complaints %}
+                <div class="complaint-info">
+                    <div class="complaint-info-top">
+                        <h5 class="complaint-info-top-header para">Complaint #{{complaint.token}}</h5>
+                        <p class="complaint-info-top-name para" style="padding:5px 0px;">Complaint On:</p>
+                        <p class="complaint-info-top-name para">Name: Dr. {{complaint.doctorname}}</p>
+                        <p class="complaint-info-top-id para">ID: {{complaint.doctorId}}</p>
+                    </div>
+                    <div class="complaint-info-middle">
+                        <div id="complaint-info-middle-complaint" class="complaint-info-middle-complaint display-hide">
+                            <p >
+                                {{complaint.complaint_text}}
+                            </p>
+                            <div class="take-action-ignore">
+                                <form class="take-action" action="/hospital/complaints/takeaction/{{complaint.token}}"> 
+                                    <button class="btn display-hide" type="submit" id="">Submit</button>
+                                    <button class="btn"  id="">Take Action</button>
+                                </form>
+                                <form class="ignore-form"  action="/hospital/complaints/ignore/{{complaint.token}}"> 
+                                    <button class="btn" type="submit" id="">Ignore</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="complaint-show-hide">
+                            <button class="btn btn-show">Show Complaint</button>
+                            <button class="btn btn-hide display-hide">Hide Complaint</button>
+                        </div>
+                    </div>
+                    <div class="compalint-patient-info">
+                        <p class="complaint-info-top-name para" style="padding:5px 0px;">Complaint By:</p>
+                        <p class="compalint-patient-info-name para">Name: {{complaint.patientname}}</p>
+                        <p class="compalint-patient-info-name para">ID: {{complaint.patientId}}</p>
+                        <p class="compalint-patient-info-name para">Date: {{complaint.time}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>                
+        </section>
+        <section class="left-right" id="patient-complaints-action">
+            <h3 class="action-title">ACTION</h3>
+            <form id="patient-complaints-take-action" action='/hospital/complaints/sendNotification' method="POST">
+                <label for="">Complaint Token:</label>
+                <input class="input" id="doctor-complaint-tokenid" name="token" type="text" value="" readonly>
+                <label for="">Doctor ID:</label>
+                <input class="input" id="doctor-complaint-id" name="did" type="text" value="" readonly> 
+                <label for="">Action message</label>
+                <textarea class="input input-textarea" name="action-text" placeholder="Enter your message here..."></textarea>
+                <button class="action-button" type="submit">Action</button>
+            </form>
+        </section>
+    </section>
+    {% include "Landing/footer.html" %}
+    <script src="{% static 'HospitalDashboard/js/complaints.js' %}"></script>
+</body>
+</html>

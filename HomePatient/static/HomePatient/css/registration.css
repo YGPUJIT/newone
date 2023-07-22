@@ -1,0 +1,271 @@
+body{
+    margin:0;
+    background-color: rgba(37, 122, 201, 0.8);
+    position: relative;
+}
+
+#main-body{
+    height: 100vh;
+    background-image: url('/static/HomePatient/images/bg_form.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* overflow:hidden; */
+    display: flex;
+    align-items: center;
+
+}
+
+
+#registration-body{
+    text-align: center;
+    margin: auto;
+    width: 50vw;
+    min-width: 600px;
+    background-color: rgba(37, 122, 201);
+    border-radius: 10px;
+    position: relative;
+    color: white;
+}
+
+.part{
+    padding: 20px;
+}
+
+.part-image{
+    /* width: 100%; */
+    height: 60vh;
+    min-height: 350px;
+}
+
+.image-title{
+    color: white;
+}
+
+.photos-inner{
+    margin-top: 5px;
+    background-color: rgba(37, 122, 201);
+    color: white;
+    border: 1px solid white;
+    border-radius:10px;
+    padding: 10px;
+}
+
+.photos-inner > input{
+    display: block;
+    padding: 2px;
+}
+
+.photos-inner > label{
+    padding: 2px;
+    display: block;
+    text-align: left;
+}
+
+
+
+.display_hidden{
+    display: none;
+}
+
+.none{
+    display: none;
+}
+
+.remove_bg{
+    overflow: hidden;
+}
+
+
+#camera-window{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(37, 122, 201);
+    text-align: center;  
+    border-radius: 20px;  
+    border: 1px solid white;
+}
+
+#stream{
+    display: block;
+    /* height: 300px; */
+    width: 400px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#snapshot{
+    height: 20px;
+    overflow: auto;
+    background-color: white;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#snapshot > p{
+    margin: 0;
+    padding: 0;
+} 
+
+
+
+#left,#right{
+    /* position: relative; */
+    /* top:50%; */
+    /* transform: translateY(-50%); */
+    position: relative;
+    display: inline-block;
+    bottom: 0px;
+    width: 49%;
+    box-sizing: border-box;
+    font-size:2rem;
+    font-weight: bold;
+    /* border: 1px solid white; */
+    /* border-radius: 10px; */
+    color: white;
+    background-color: rgba(37, 122, 201);
+    /* padding: 0 20px; */
+    cursor: pointer;
+}
+
+/* #left{
+    left: 30px;
+} */
+
+#left:hover,#right:hover{
+    background-color: rgb(34, 49, 90);
+}
+
+/* #right{
+    right: 30px;
+} */
+#send{
+    margin-top: 10px;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    background-color: rgba(37, 81, 97, 0.7);
+    border: 1px solid white;
+}
+
+/* 
+#india-image{
+    position: relative;
+} */
+
+.text{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 160px;
+    min-width: 150px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius:10px;
+    padding: 3px;
+}
+
+#india-text{
+    top:10px;
+    left:10px;
+}
+
+#india-text-two{
+    right:10px;
+    bottom: 25px;
+}
+
+
+#india-text-three{
+    right:10px;
+    top: 10px;
+}
+
+
+
+#india-text-four{
+    left:10px;
+    bottom: 25px;
+}
+
+#india-text-five{
+    top:35%;
+    right: 10px;
+}
+
+#india-text-six{
+    top:30%;
+    left: 10px;
+}
+
+.symptoms{
+    width: 300px;
+    padding: 3px;
+    margin: 5px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#symptoms_main{
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+#pr{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+
+
+@media only screen and (max-width:768px){
+    #main-body{
+        display: block;
+        background-image: none;
+    }
+    #registration-body{
+        box-sizing: border-box;
+        background-color: black;
+        width:100%;
+        padding: 0;
+        margin: 0;
+        transform: initial;
+        border: none;
+        border-radius:0;
+    }
+    #photos{
+        background-color: white;
+        color: black;
+    }
+    .photos-inner{
+        background-color: white;
+        color: black;
+        border-radius: initial;
+        border: 1px solid black;
+    }
+    #left,#right{
+        display: none;
+    }
+    .display_hidden{
+        display: block;
+    }
+}
+
+
+
+/* @media only screen and (max-width:420px){
+    #registration-body{
+        width:100%;
+    }
+    #left,#right{
+        display: none;
+    }
+
+} */

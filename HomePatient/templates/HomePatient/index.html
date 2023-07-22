@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HomePatient/css/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+  {% include 'HomePatient/patientHeader.html' %}
+  <div id="complaint">
+    <button>
+      <a href="/home/complaint">Complaints and Greviance</a>
+    </button>
+  </div>
+  <section id="main-body">
+      <div id="main-body-left">
+        {% if not patient.doctorAssigned %}
+          {% include 'HomePatient/doctorNotAssigned.html' %}
+        {% else %}
+            <div>
+              <p class="title">Updates for you</p>
+                <ul id="updates-doctor">
+                  {% if not patient.initiateTreatment %}
+                    <li style="text-align: center;"> <h3 style="color: gray;">Please wait untill doctor initiate treatment.</h3></li>
+                  {% endif %}
+                  {% for value in patient.updates_from_doctors %}
+                    <li>{{value.notification}}</li>
+                  {%endfor%}
+                </ul>
+              <p class="title">Pharmacy</p>
+              <ul id="updates-pharmacy">
+                {% ifequal patient.medicine_list|length 0 %}
+                  <p>NOTE* You will see the medicine list given by Dr. {{doctor.name}} here.</p>
+                {% else %}
+                    {% for val in patient.medicine_list %}
+                        <li class="medicine_li">
+                          <p ><strong>Medicine Name: </strong> <span class="med_name">{{val.medicine_name}}</span></p>
+                          <p ><strong>Usuage: </strong> <span class="med_usuage"> {{val.medicine_directive}}</span></p>
+                        </li>
+                    {% endfor %}
+                {% endifequal %}
+              </ul>
+              <div id="downloadPharma">
+                <a href="/home/downloadPharma" target="_blank">Download Precription</a>
+              </div>
+            </div>
+        {% endif %}
+      </div>
+      <div id='main-body-right'>
+        <div id="main-body-right-doctor">
+          {% if not patient.doctorAssigned %}
+            <div id="main-body-right-doctor-absent" style="justify-content: center;padding: 10px;">
+              <p>No Doctor allocated, please fill your current condition, to allocate you one</p>
+            </div>
+          {% else %}
+            <div id="main-body-right-doctor-present">
+                <h3 id="hospital-doctor-card-header">Hospital assigned</h3>
+                <div style="padding: 10px;">
+                  <p><span style="font-weight:bold">Doctor Name:</span> Dr. <span style="text-transform: capitalize;">{{doctor.name}}</span></p>
+                  <p><span style="font-weight:bold">Specialist:</span> <span style="text-transform:capitalize;">{{doctor.specilisation}}</span></p>
+                  <p><span style="font-weight:bold">Hospital:</span> <span style="text-transform: capitalize;">{{hospital.hospital_name}}</span></p>
+                  <p><span style="font-weight:bold">City:</span> <span style="text-transform: capitalize;">{{hospital.location.city}}</span></p>
+                  <p><span style="font-weight:bold">Address:</span> <span style="text-transform: capitalize;">{{hospital.location.area}}, {{hospital.location.pincode}}</span></p>
+                </div>
+            </div>
+          {% endif %}
+        </div>
+        <div id="main-body-right-map">
+          <p id="map-hospital">Map to the hospital assigned</p>
+          <div id="main-body-right-map-top">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=75.43762207031251%2C11.72794406943878%2C79.68933105468751%2C14.270101247302511&amp;layer=mapnik&amp;marker={{hospital.location.latitude}}%2C{{hospital.location.longitude}}" style="border: 1px solid black"></iframe>
+          </div>
+          <div style="text-align: center;padding: 5px;">
+            <a target="_blank" style="color: white;font-size: 0.8rem;text-decoration: none;text-align: center;padding: 5px;background-color:rgb(32, 118, 192);;border: 1px solid white;" href="https://www.openstreetmap.org/?mlat=13.002&amp;mlon=77.563#map=8/13.002/77.563">View Larger Map</a>
+          </div>
+        </div>
+      </div>
+  </section>
+</body>
+<script src="{% static 'Security/js/index.js' %}"></script>
+</html>

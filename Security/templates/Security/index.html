@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'Security/css/index.css' %}">
+  <title>Security</title>
+</head>
+<body>
+    <section style="padding: 10px;">
+      <a href="/">GO BACK TO HOME</a>
+    </section>
+    <section>
+      <div id='security-main'>
+        <div class="security-main-inner">
+          <div id="security-main-inner-search">
+            <h3>Patient Information</h3>
+            <label id="searchLabel" for="patient-search">Get Information</label>
+            <input id='patient-search' type="search" name='searchId' value='' placeholder='Search...'>
+            <button id="searchBtn">Search</button>
+          </div>
+          <div id="security-main-inner-information">
+             
+          </div>
+        </div>
+
+        <div class="security-main-inner">
+
+            <div class="security-main-inner-top">
+              <!-- /Security/video" -->
+              <!-- {% static 'Security/images/del.jpg' %} -->
+              <img id="video" src="/Security/video">
+            </div>
+            <div id="controller">
+              <button id="demo" onclick="loadDoc()">Start/Stop</button>
+            </div>
+            <button id="action" value="OKOKOKOK" style="display: none;">Refresh</button>
+            <button id="refresh" value="OKOKOKOK">Refresh</button>
+            <div id='possible-offenders' class="security-main-inner-bottom">
+              <h3>Possbile offender</h3>
+            </div>
+        </div>
+      </div>
+    </section>
+    <script src="{% static 'Security/js/index.js' %}"></script>
+    <script src="{% static 'Security/js/create_element.js' %}"></script>
+    <script src="{% static 'Security/js/search.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Landing/css/login/patientLogin.css' %}">
+</head>
+<body>
+    {% include "landing/landing_header.html" %}
+    <section id="login-outer">
+        <div id="login">
+            <h4>Login</h4>
+            <h6 id="idName"></h6>
+            <form id="form" method="POST" action="/home/login" enctype="multipart/form-data">
+                <label class="label" for="">ID</label>
+                <input id="id" class="text-box" type="text" name="id" placeholder="ID" required>
+                <label class="label" for="">Password</label>
+                <input id="password" class="text-box" type="password" name="password" placeholder="Password" required>
+                <button id="login-submit" type="submit">Submit</button>
+            </form>
+            <p style="margin: 3px;" id="text"></p>
+        </div>
+    </section>
+    {% include "Landing/footer.html" %}
+</body>
+<script src="{% static 'Landing/js/PatientLogin/patientLogin.js' %}"></script>
+</html>

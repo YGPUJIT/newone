@@ -1,0 +1,418 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background: url('/static/doctorHome/images/bg_color.png'); */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.bg{
+    background: url('/static/doctorHome/images/bg_color.png');
+    color: white;
+}
+
+.caps{
+    text-transform: uppercase;
+}
+
+.capitalise{
+    text-transform: capitalize;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+#patient-details-name{
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#patient-details-name p{
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+#patient-details-name h4{
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+/* #patient-details-name */
+
+#symptoms-diagnosis{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#symptoms{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-left: auto;
+    align-self: center;
+}
+
+
+#symptoms-table tr,td{
+    border: 2px solid rgb(32, 118, 192);
+    padding: 10px 20px;
+}
+
+#symptoms-table{
+    width: 100%;
+    text-align: left;
+    border-radius: 10px;
+    border-collapse: collapse;
+    border: 1px solid rgb(32, 118, 192);
+    background-color: #f1f1f1;
+}
+
+
+
+
+#symptoms-table th{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+
+
+
+#diagonsis-content{
+    width: 60%;
+    border: 2px solid rgb(32, 118, 192);
+    background-color: #f1f1f1;
+    /* padding: 10px; */
+    border-radius: 10px;
+}
+
+#diagonsis-content h4{
+    margin:0;
+    padding: 10px 0px;
+    text-align: center;
+    color: white;
+    /* border-radius:5px; */
+}
+
+#diagonsis-content p{
+    margin: 10px 0;
+    line-height: 25px;
+    height: 40vh;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#diagonsis-document{
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid rgb(32, 118, 192);
+    font-size: 1.2rem;
+}
+
+#diagonsis-document a{
+    color: rgb(32, 118, 192);
+}
+
+
+#accept-reject{
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: left;
+    background-color: #f1f1f1;
+}
+
+#accept-reject button{
+    padding: 10px 20px;
+    color: black;
+    border-radius: 10px;
+    background: rgb(32, 118, 192);
+    cursor: pointer;
+}
+
+
+#patient-treatment{
+    padding: 5px 0px;
+}
+
+
+#patient-treatment-header{
+    text-align: center;
+}
+
+#patient-treatment-header p{
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    font-size: 1.2rem;
+    border-top:2px solid gray;
+    border-bottom:2px solid gray;
+}
+
+
+#patient-treatment-body{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#patient-treatement-suggestions{
+    width: 35%;
+    margin: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+    padding-bottom: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid rgb(32, 118, 192);
+    border-left: none;
+    align-self: flex-start;
+}
+
+#patient-treatement-suggestions h4{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#patient-treatement-suggestions textarea{
+    width: 100%;
+    height: 200px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 5px 0px;
+    font-size: 1.1rem;
+}
+
+
+#patient-treatement-suggestions-btn{
+    margin: 0;
+    display: block;
+    border: none;
+    width: fit-content;
+    padding: 10px;
+    margin: auto;
+}
+
+#patient-treatment-suggestions-list{
+    width: 65%;
+    margin: 10px;
+    margin-right: 0;
+    /* border-radius: 10px; */
+    padding-bottom: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid rgb(32, 118, 192);
+    border-right: none;
+    /* align-self: flex-start; */
+}
+
+
+#patient-treatment-suggestions-list h4{
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+
+}
+
+#patient-treatment-suggestions-list-content{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    overflow-y: auto;
+    max-height: 200px;
+    list-style: none;
+}
+
+#patient-treatment-suggestions-list-content li{
+    margin: 5px 0px;
+    padding: 10px;
+    background-color: white;
+}
+
+#footer{
+    height: 50vh;
+}
+
+.label{
+    text-align: center;
+    color: gray;
+    text-transform: uppercase;
+}
+
+#medicine{
+    margin:10px;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid rgb(32, 118, 192);
+    /* align-items: flex-start; */
+}
+
+#medicine-left{
+    /* align-self: flex-start; */
+    width: 40%;
+    border: 2px solid rgb(32, 118, 192);
+    position: relative;
+    /* overflow: auto; */
+}
+
+
+
+#medicine-form{
+    background-color: #f1f1f1;
+    padding: 5px;
+}
+
+#medicine-form button{
+    display: block;
+    width: fit-content;
+    padding: 10px 15px;
+    margin-left: auto;
+    background-color: rgb(32, 118, 192);
+    color: white;
+    border: none;
+    margin-top: 5px;
+}
+
+#medicine-form-tab{
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    align-content: flex-start;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.medicine-form-tab-medicine{
+    background-color: rgb(32, 118, 192);
+    display: flex;
+    min-width: 100px;
+    max-width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin: 5px;
+}
+
+.medicine-form-tab-medicine input{
+    background-color: rgb(32, 118, 192);
+    color: white;
+    border: none;
+    width: 90%;
+    text-transform: uppercase;
+}
+
+.medicine-form-tab-medicine span{
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    padding: 0px 10px;
+    cursor: pointer;
+    background-color: rgb(32, 118, 192);
+    color: white;
+    /* text-transform: lowercase; */
+    font-weight: bold;
+}
+
+input[type="text"][disabled] {
+    color: red;
+ }
+
+ #medicine-input{
+     background-color: #f1f1f1;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding: 10px;
+ }
+
+ #medicine-input input {
+     width: 80%;
+     padding: 5px;
+ }
+
+ #medicine-input button{
+     margin: 5px 0px;
+     padding: 5px 10px;
+     background-color: rgb(32, 118, 192);
+     border: none;
+     color: white;
+ }
+
+
+
+ #medicine-right{
+    width: 60%;
+    margin-left: auto;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+ .medicine-list{
+    margin: 0;
+    list-style:decimal;
+    position: absolute;
+    height: 90%;
+    overflow: auto;
+    width: 100%;
+    left:0;
+    top:10%;
+    padding: 10px 30px;
+ }
+
+
+ .medicine-list-item{
+     text-transform: uppercase;
+     padding: 5px 10px;
+     width: fit-content;
+     margin-bottom: 5px;
+     color: rgb(32, 118, 192);
+     background-color: white;
+ }
+
+
+ .medicine-title-left{
+    margin: 0;
+    /* margin-bottom: 20px; */
+    padding: 5px 0;
+    background-color: rgb(32, 118, 192);
+    color: white;
+    text-align: center;
+ }
+
+ .medicine-title-right{
+    margin: 0;
+    /* margin-bottom: 20px; */
+    padding: 5px 0;
+    background-color: rgb(32, 118, 192);
+    color: white;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top:0;
+    z-index: 1;
+}
+
+.medicine-none{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: gray;
+    border-radius: 5px;
+}

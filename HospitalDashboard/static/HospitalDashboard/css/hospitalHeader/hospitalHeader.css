@@ -1,0 +1,59 @@
+#header{
+    color: white;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#header-top{
+    text-align: center;
+    padding: 5px 0;
+    background-color: #f1f1f1;
+    color: rgb(59, 59, 233);
+}
+
+#header-top > p{
+    margin: 0;
+}
+
+#header-bottom{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    background: url('/static/HospitalDashboard/images/bg_color.png');
+}
+
+#header-bottom-left{
+    display: block;
+}
+
+#header-bottom-right{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    margin-left:auto;
+    padding: 10px 15px;
+}
+
+#header-bottom-right > li{
+    margin: 10px 5px;
+} 
+
+
+#header-bottom-right a{
+    text-decoration: none;
+    color: white;
+}
+
+#header-bottom-right > li:hover{
+    color: darkblue;
+    cursor: pointer;
+}
+
+#header-bottom-right a:hover{
+    color: darkblue;
+}

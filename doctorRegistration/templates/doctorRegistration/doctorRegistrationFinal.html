@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://6e8d0e1.grapedrop.net/ -->
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="{% static 'doctorRegistration/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'doctorRegistration/css/gjs-base.css' %}">
+
+<style>
+* {
+    box-sizing: border-box;
+    color: rgb(32, 118, 192)!important;
+}
+
+body{
+    background: url('/static/doctorRegistration/images/bg_color.png');
+}
+
+#form{
+    height: 100vh;
+    padding-top: 30px;
+    max-width: 360px;
+    min-width: 310px;
+    margin: auto ;
+    border-radius: 20px !important;
+    overflow: hidden;
+    /* margin: auto; */
+}
+ .gpd-box {
+    padding: 5px 0;
+}
+ #iodg {
+    width: 100%;
+    display: inherit;
+    /* height: 721px; */
+    /* margin: 0 0 0 540px; */
+    background-color: #ffffff;
+    border: 0 none rgb(0, 0, 0);
+    padding: 5px 12px 5px 10px;
+}
+body {
+    color: #000000;
+    background-color: #F0FAF8;
+}
+.gpd-header {
+    margin: 0;
+}
+#izjk {
+    font-family: Helvetica, serif;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 38px;
+    /* padding: 53px 0 0 0; */
+    font-size: 30px;
+    margin: 0 16px 0 16px;
+    color: rgb(32, 118, 192);
+}
+#io79 {
+    /* margin: 49px 0 29px 0; */
+    font-family: Helvetica, serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 14px;
+    color: #706d6d;
+}
+#ierjb {
+    display: none;
+}
+#ix4f4 {
+    display: none;
+}
+#ifvjq {
+    background-color: rgb(32, 118, 192);
+    color: white !important;
+}
+
+#btn{
+    text-align: center !important;
+}
+
+#ii9z {
+    width: 100%;
+    /* padding: 20px 20px 20px 20px; */
+    /* height: 355px; */
+    /* margin: 6px 0 16px 26px; */
+    border-radius: 0 0 0 0;
+    font-family: Helvetica, serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+}
+#i2y1s {
+    /* margin: 0 1px 10px 0; */
+    padding: 5px 0 5px 6px;
+    text-align: left;
+    white-space: normal;
+    line-height: 19px;
+    font-size: 12px;
+}
+
+a.page-brand-badge {
+        border-radius: 3px !important;
+        background-color: white !important;
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.1);
+        padding: 5px 7px !important;
+        font-family: Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        text-decoration: none !important;
+        color: #555 !important;
+        transition: box-shadow 0.25s !important;
+    }
+a.page-brand-badge:hover {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.1);
+}
+
+</style>
+</head>
+<body>
+
+    <div id="form">
+        <div id="iodg" class="gpd-box">
+            <h1 id="izjk" class="gpd-header">Password Reset</h1>
+            <p id="io79">Please enter your New Password for your Account</p>
+        <form method="post" action="/doctor/finalConfirmPasswordChange" id="ii9z" class="form">
+            <div class="form-group">
+                <label id="ibdd" class="label">Enter New Password</label>
+                <input type="password" placeholder="New Password" name="password" id="irzu" class="input">
+            </div>
+            <div class="form-group">
+                <label id="i2vah" class="label">Re-Enter New Password</label>
+                <input type="password" placeholder="Confirm Password" name="Confirm Password" id="ipgaw" class="input">
+            </div>
+            <p id="i2y1s">Hint: The Password should contain Upper Case, Lower Case, Numbers and Special Characters.<br></p>
+            <div class="form-group">
+
+            </div>
+            <div id="btn" class="form-group">
+                <button type="submit" id="ifvjq" class="button">Confirm</button>
+            </div>
+            <div style="color: white;background-color: white;" data-form-state="success" id="ierjb" class="state-success" style="display: none;"> <div style="color: white;"> <p><a href="/doctorlogin">click here</a> to Continue</p> </div></div>
+            <!-- <div style="color: white;" data-form-state="error" id="ix4f4" class="state-error" style="display: none;">An error occurred on processing your request, try again!</div> -->
+        </form></div>
+    </div>
+
+
+
+<script>
+    window._formUrl = "https://grapedrop.com/form-collector/6e8d0e1cc85c46568ced1cc024aa8810";
+    window.__gRecapKey = "";
+    window.postJQCnt = [];
+    window.postJQ = function() {
+        window._jqloaded = 1;
+        postJQCnt.forEach(function(fn) { fn && fn() })
+    }
+</script>
+
+<style data-css-anim="">
+    [data-anim-type]:not([data-anim-done]) { opacity: 0; }
+</style>
+
+        
+<script async="" src="{% static 'doctorRegistration/js/jquery.min.js.download' %}" onload="postJQ()"></script>
+<script async="" src="{% static 'doctorRegistration/js/gpd.js.download' %}"></script>
+<script async="" src="{% static 'doctorRegistration/js/bootstrap.bundle.min.js.download' %}"></script>
+</body>
+</html>

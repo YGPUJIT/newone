@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/doctorHome/css/home.css' %}">
+    <title>Doctor home</title>
+</head>
+<body>
+    {% include 'doctorHome/doctorHomeHeader.html' %}
+    <section id="appontements-contents">
+            <!-- <h3 id="appontements-contents-heading">Appointements</h3> -->
+            <div id="appontements-contents-name">
+                <h4>Hello, {{doctor.name}}</h4>
+            </div>
+            <div id="flex-it">
+                <div id="sort-by-patientlist">
+                    <div id="appontements-contents-total">
+                        <p>Total Patients: {{patients|length}}</p>
+                        <p id="appontements-contents-total-sortby">Patients allocated</p>
+                    </div>
+                    <div id="appontements-contents-patientlist">
+                        {% for patient in patients %}
+                        <div class="patient">
+                            <div class="patient-top">
+                                <div class="patient-top-left">
+                                    <!-- <img class="patient-top-left-image" src="{% static 'doctorHome/images/okay.png'%}" alt=""> -->
+                                    <img class="patient-top-left-image" src={{patient.href}} alt="">
+                                </div>
+                                <div class="patient-top-right">
+                                    <p class="patient-top-right-name caps">{{patient.first_name}} {{patient.last_name}}</p>
+                                    <p class="gray caps">{{patient.sex}}</p>
+                                </div>
+                            </div>
+                            <div class="patient-bottom">
+                                <div class="patient-bottom-address-date">
+                                    <p class="gray caps">Treatment Initiated: {{patient.initiateTreatment}}</p>
+                                    <p class="gray caps">Possible Disease: {{patient.disease_actual}}</p>
+                                </div>
+                                <div class="patient-bottom-button">
+                                    <button><a class="white" href="/doctorhome/patientprofile/{{patient.pid}}">View Patient</a></button>
+                                </div>
+                            </div>
+                        </div>  
+                        {%endfor%}   
+                    </div>  
+                </div>
+                <div id="notification">
+                    <h4 style="text-align: center;border-bottom: 1px solid black;padding: 10px;margin: 0;">Notification</h4>
+                    <ul id="notification-content">
+                        <li>value. notification value notification value notification value notification</li>
+                        <li>value. notification value notification value notification value notification</li>
+                        <li>value. notification value notification value notification value notification</li>
+                        <li>value. notification value notification value notification value notification</li>
+                    </ul>
+                </div>
+            </div> 
+    </section>
+    {% include "Landing/footer.html" %}
+    <script src="{% static '/doctorHome/js/doctorHome.js' %}"></script>
+</body>
+</html>

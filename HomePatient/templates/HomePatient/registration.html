@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HomePatient/css/registration.css'%}">
+    <title>Home</title>
+</head>
+<body id="body">
+    {% include 'HomePatient/patientHeader.html' %}
+    <section id="main-body">
+        <div id="registration-body">
+            <form id="form" method="POST" action="/home/storeData" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div id="india-image" class="part">
+                        <img class="part-image" src="{% static 'HomePatient/images/India.png'%}" alt="">
+                        <h4 class="text" id="india-text">Welcome To Ayushman Bharath, a digital India is a better India.</h4>
+                        <h5 class="text" id="india-text-two">Around 40cr Indian citizens have been benefitted from this scheme.</h5>
+                        <h4 class="text" id="india-text-three">Ayushman Bharath is world’s largest healthcare scheme.</h4>
+                        <h6 class="text" id="india-text-four">Ayushman Bharat will be a paperless and cashless scheme.</h6>
+                        <h2 class="text" id="india-text-five">Go paper-less.Save India.</h2>
+                        <h5 class="text" id="india-text-six">Digital India is a flagship programme of the Government of India with a vision to transform India into a digitally empowered society and knowledge economy</h5>
+                </div>
+                <div id="photos" class="part">
+                    <div class="photos-inner">
+                        <p>Upload Images</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <input type="radio" id="desktop_opt" name='photo_opt' value='desktop'>Desktop
+                        <p style="color: white;font-size: 0.8rem;">*NOTE: Please Upload atleast 4 Photos with netural background</p>
+                    </div>
+                    <div class="photos-inner">
+                        <label for="p1">Photos</label>
+                        <input id="p1" type="file" name="image" accept="images/jpg, images/png" multiple>
+                    </div>
+                    <h3>OR</h3>
+                    <div style="text-align: left;">
+                        <input type="radio" id="camera_opt" name='photo_opt' value="camera">Camera
+                        <p style="color: white;font-size: 0.8rem;">*NOTE: Please take atleast 7 Photos with netural background</p>
+                    </div>
+                    <div class="photos-inner">
+                        <label for="p1">Camera</label>
+                        <input id="btn-start" type="button" class="button" value="Start Camera">
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="photos-inner">
+                        <p>Other Information</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <p style="color: white;font-size: 0.9rem;">*NOTE: Please upload jpg/png type only.</p>
+                    </div>
+                    <div id="pr" style="text-align:left;">
+                        <input type="file" name='previous_record' accept="images/jpg, images/png" multiple>
+                    </div>
+                    <div style="text-align: left;">
+                        <p style="color: white;font-size: 0.9rem;">*NOTE: Please update the possible symptoms based on severity.</p>
+                        <div id="symptoms_main">
+                            <select class="symptoms" name="s1" id="">
+                                <option value="None">None</option>
+                                {% for s in s1%}
+                                <option value="{{s}}">{{s}}</option>
+                                {% endfor %}
+                            </select>
+                            <select class="symptoms" name="s2" id="">
+                                <option value="None">None</option>
+                                {% for s in s2%}
+                                <option value="{{s}}">{{s}}</option>
+                                {% endfor %}
+                            </select>
+                            <select class="symptoms" name="s3" id="">
+                                <option value="None">None</option>
+                                {% for s in s3%}
+                                <option value="{{s}}">{{s}}</option>
+                                {% endfor %}
+                            </select>
+                            <select class="symptoms" name="s4" id="">
+                                <option value="None">None</option>
+                                {% for s in s4%}
+                                <option value="{{s}}">{{s}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <button id='send' type="submit">Update Information</button>
+                </div>
+            </form>
+            <div id="check">
+                <div id="left">
+                    <
+                </div>
+                <div id="right">
+                    >
+                </div>
+            </div>
+        </div>
+        <div id="camera-window" class="play-area none">
+            <div class="play-area-sub">
+              <h3>The Stream</h3>
+              <video id="stream" ></video>
+            </div>
+            <br>
+            <button id="btn-capture" type="button" class="button">Capture Image</button>
+            <button id="close_camera">Close Camera</button>
+            <canvas style="display: none;" id="capture" width="1920" height="1080"></canvas>
+            <div id='snapshot'>
+                <p>Total Images</p>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'HomePatient/js/registration.js' %}"></script>
+    <script src="{% static 'HomePatient/js/camera.js' %}"></script>
+</body>
+</html>

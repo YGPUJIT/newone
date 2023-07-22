@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'doctorRegistration/css/doctorRegistration.css'%}">
+    <title>Doctor Registration</title>
+</head>
+<body>
+    <section id="doctor-registration">
+        {% include 'doctorRegistration/doctorHeader.html' %}
+        <div id="doctor-registration-content">
+            <h3 style="text-align: center;">Doctor Registration</h3>
+            <form id="form" action="/doctor/registrationValidation" method="post">
+                <div class='doctor-registration-input'>
+                    <input name="name" type="text" value="" placeholder="Name" required>
+                </div>
+                <div class='doctor-registration-input'>
+                    <input name="email" type="email" value="" placeholder="Email" required>
+                </div>
+                <!-- <div class='doctor-registration-input'>
+                    <p>*Please select a strong password, preferably with special characters</p>
+                </div>
+                <div class='doctor-registration-input'>
+                    <input name="password" type="password" value="" placeholder="Password" required>
+                </div> -->
+                <div class='doctor-registration-input'>
+                    <p>*Please select your specilisation from the list as provided in the government medical certificate
+                        , later it would be verified physically.</p>
+                </div>
+                <div class='doctor-registration-input'>
+                    <select name="specilisation" id="">
+                        <option  value="none">Select Specilisation</option>
+                        {% for v in specilisation %}
+                            <option  value="{{v}}">{{v}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class='doctor-registration-input btn'>
+                    <button id="form-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="{% static 'doctorRegistration/js/doctorRegistration.js' %}"></script>
+</html>

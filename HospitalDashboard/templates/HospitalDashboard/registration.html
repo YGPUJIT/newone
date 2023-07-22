@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HospitalDashboard/css/registration/registration.css' %}">
+    <title>Hospital Registration</title>
+</head>
+<body>
+    {% include 'landing/landing_header.html' %}
+    <section id="main">
+        <form id="main-form" method="post" action="/hospital/registration/storeData">
+            <div style="text-align: center;">
+                <h3>Hospital Registration</h3>
+            </div>
+            <div class="input">
+                <label class="label" for="gname">Hospital Name</label>
+                <input class="" id="hname" type="text" name="hname" value="" placeholder="Hospital Name" required>
+            </div>
+            <div class="input">
+                <label class="label" for="password">Password</label>
+                <input class="" id="password" type="password" name="password" value="" placeholder="Enter Password" required>
+            </div>
+            <div class="input">
+                <label class="label" for="hcity">City</label>
+                <select name="city" id="hcity">
+                    <option value="select_city">Select City</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+            <div class="input">
+                <label class="label" for="mail">E-Mail</label>
+                <input type="email" value="" name="mail" id="mail" placeholder="E-Mail">
+            </div>
+            <div class="input">
+                <label class="label" for="area">Area</label>
+                <input type="text" value="" name="area" id="area" placeholder="Area" required>
+            </div>
+            <div class="input">
+                <label class="label" for="pin_code">Pin Code</label>
+                <input type="text" value="" name="pcode" id="pin_code" placeholder="Pin Code" required>
+            </div>
+            <div id="form_button" class="input">
+                <button id="form_button_inner" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+<script src="{% static 'HospitalDashboard/js/registration.js' %}"></script>
+</html>
+

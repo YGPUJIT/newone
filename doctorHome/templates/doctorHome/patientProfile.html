@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'doctorHome/css/patientProfile.css' %}">
+    <title>Patient Name</title>
+</head>
+<body>
+    {% include 'doctorHome/doctorHomeHeader.html' %}
+    <section id="patient-details">
+        <div id="patient-details-name">
+            <h4 class="capitalise"><span >{{patient.first_name}} {{patient.last_name}} - {{patient.pid}}</span></h4>
+             <p><strong>Possible Disease:</strong> {{patient.disease_actual}}</p>
+        </div>
+        <div id="symptoms-diagnosis">
+            <div id="diagonsis-content">
+                <h4 class="bg">Patient Probelem in detail:</h4>
+                <p>{{patient.symptoms_explanation}}</p>
+            </div>
+            <div id="symptoms">
+                <table id="symptoms-table">
+                    <tr class="bg">
+                        <th colspan="2">SYMPTOMS</th>
+                    </tr>
+                    {% for symp_key,value in patient.symptoms.items %}
+                    <tr>
+                        <th class="text-center">Symptom {{forloop.counter}}:</th>
+                        <td class="caps"> {{value}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <div id="diagonsis-document">
+                    {% if patient_file_name %}
+                    <span>Click  <a href="/static/{{patient_file_name}}" download="{{patient.pid}}">download</a> to view previous record of {{patient.first_name}}</span> 
+                    {% else %}
+                    <span>No previous Information available</span> 
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% if not patient.initiateTreatment %}
+        <div id="accept-reject">
+            <form action="/doctorhome/initiate/{{patient.pid}}" method="post">
+                <span>Please click on <button type="submit">Initiate Treatment</button> to continue</span>
+            </form>
+        </div>
+        {% endif %}
+    </section>
+    {% if patient.initiateTreatment %}
+    <section id="patient-treatment">
+        <div id="patient-treatment-header">
+            <p>Treatment</p>
+        </div>
+        <div id="patient-treatment-body">
+            <div id="patient-treatment-suggestions-list">
+                <h4 class="bg">Suggestions done till date</h4>
+                <ul id="patient-treatment-suggestions-list-content">
+                    {% ifequal suggestions|length 0 %}
+                    <h3 class="label">No suggestions done yet.</h3>
+                    {% else %}
+                        {% for val in suggestions %}
+                             <li>{{val.notification}}</li>
+                        {% endfor %}
+                    {% endifequal %}
+                </ul>
+            </div>
+            <form id="patient-treatement-suggestions" method="POST" action="/doctorhome/suggestion/{{patient.pid}}">
+                <h4 class="bg">Suggestions for Patient</h4>
+                <textarea name="doctor_suggestion" id="" cols="" rows="" placeholder="Enter the suggestion here"></textarea>
+                <button class="bg" id="patient-treatement-suggestions-btn" type="submit">Send Suggestion</button>
+            </form>
+        </div>
+    </section>
+    <section id="medicine">
+        <div id="medicine-left">
+            <h4 class="medicine-title-left">UPDATE MEDICINE</h4>
+            <form id="medicine-form" action="/doctorhome/patientprofile/{{patient.pid}}/medicine" method="POST">
+                <div id="medicine-form-tab">
+
+                </div>
+                <button type="submit">Update Medicine</button>
+            </form>
+            <div id="medicine-input">
+                <label for="">Medicine Name:</label>
+                <input id="medicine_name" type="text" name="medicine" value="" placeholder="Medicine Name">
+                <label for="">Medicine Directive:</label>
+                <input id="medicine_directive" type="textarea" name="directive" value="" placeholder="Medicine directive">
+                <button id="addMedicine">Add Medicine to list</button>
+            </div>
+        </div>
+        <div id="medicine-right">
+            <h4 class="medicine-title-right">MEDICINE LIST</h4>
+            <ul class="medicine-list">
+                {% ifequal patient.medicine_list|length 0  %}
+                <p class="medicine-none">You have not prescribed any medicine yet.</p>
+                {% endifequal %}
+                {% for medicine in patient.medicine_list %}
+                <li class="medicine-list-item">{{medicine.medicine_name}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% endif %}
+
+    {% include "Landing/footer.html" %}
+</body>
+<script src="{% static 'doctorHome/js/patientprofile.js' %}"></script>
+</html>

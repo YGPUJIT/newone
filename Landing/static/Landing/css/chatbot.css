@@ -1,0 +1,130 @@
+
+
+
+#chat-bot-inner{
+    position: fixed;
+    /* padding: 15px; */
+    right:20px;
+    bottom: 15px;
+    background-color: rgb(32, 118, 192);
+    /* background-color: #f1f1f1; */
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+#chat-bot-content-inner{
+    background-color: #f1f1f1;
+}
+
+.chat-bot-inner{
+    width:100px;
+    cursor: text;
+    border-radius: 10px !important;
+}
+
+#chat-bot-open-close{
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding: 10px;
+}
+
+#chat-bot-content-inner{
+    border-top: 2px solid rgb(32, 118, 192);
+    height: 260px;
+    border-bottom: 1px solid black;
+    margin-bottom: 2px;
+    /* max-height: 250px; */
+    overflow: auto;
+}
+
+.display-none{
+    /* height: 0px;
+    overflow: hidden; */
+    display: none;
+}
+
+.display-full{
+    /* height: 300px;
+    transition: 0.3s; */
+    display: block;
+}
+
+.display-three{
+    width: 300px;
+    border-radius: 8px !important;
+}
+
+
+.chat-box-send{
+    display: block;
+    width: 100%;
+    color: white;
+    border: 1px solid white;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    background-color:  rgb(32, 118, 192);
+}
+
+.chat-box-text{
+    display:block;
+    /* text-align: justify; */
+    text-align: end;
+    background-color: rgb(97, 162, 241);
+    background-color:  rgb(32, 118, 192);
+    border: 1px solid white;
+    padding: 10px 4px 10px 4px;
+    margin-top: 4px;
+    border-radius: 5px;
+}
+
+.display-left{
+    margin-right: auto;
+    text-align: left;
+    max-width: 250px;
+}
+
+.display-right{
+    margin-left: auto;
+    text-align: left;
+    max-width: 250px;
+    width: fit-content;
+}
+
+#chat-bot-text{
+    padding: 5px;
+    font-size: 1.1rem;
+    color: white;
+    border:1px solid transparent;
+}
+
+#chat-bot-text::placeholder{
+    color: white;
+}
+
+#chat-bot-inner ::-webkit-scrollbar {
+width: 5px;
+}
+
+#chat-bot-inner ::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+#chat-bot-inner  ::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+#chat-bot-inner ::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+
+
+/* 
+
+@media only screen and (max-width: 475px){
+    .chat-bot-inner{
+        width:  50px;
+    }
+} */

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HospitalDashboard/css/home/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'HospitalDashboard/hospitalHeader.html' %}
+    <section id="home-content">
+        <div id="home-content-left" class="float-left">
+            {% for q in qa%}
+            <div class="home-content-left-box">
+                <div class="home-content-left-box-title">
+                    <p>{{q.question}}</p>
+                </div>
+                <a href="{{q.href}}"><img src="{{q.src}}" alt=""></a>
+            </div>
+            {% endfor %}
+            <!-- {% for q in qa%}
+            <div class="home-content-question-answer">
+                <div class="question">
+                    <h4>{{forloop.counter}}) {{q.question}}</h4>
+                </div>
+                <div class="answer">
+                    <a href="{{q.href}}">{{q.answer}}</a>
+                </div>
+            </div>
+            {% endfor %} -->
+        </div>
+        <div id="home-content-right">
+           <h4>Notification</h4>
+           <ul id="notification-content">
+               {% for value in notifications %}
+               <li>{{value.notification}}</li>
+               {%endfor%}
+           </ul>
+        </div>
+    </section>
+        {% include "Landing/footer.html" %}
+</body>
+</html>

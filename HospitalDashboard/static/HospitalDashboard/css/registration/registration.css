@@ -1,0 +1,88 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(37, 122, 201, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#main{
+    background-image: url('/static/HospitalDashboard/images/hospital_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    box-sizing: border-box;
+    padding: 20px 0;
+    /* height: calc(100vh - 140px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow-y: scroll; */
+}
+
+
+#main-form{
+    box-sizing: border-box;
+    background: rgb(35, 120, 198,0.8);
+    width: 320px;
+    border: 1px solid black;
+    padding: 15px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.label{
+    display: block;
+}
+
+.input{
+    padding: 10px;
+}
+
+
+.input > input,select{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+
+#form_button{
+    text-align: center;
+}
+
+#form_button > button{
+    background-color: rgb(35, 120, 198);
+    padding: 5px 10px;
+    color: white;
+}
+
+#form_button > button:hover{
+    background-color: darkblue;
+}
+
+
+
+@media only screen and (max-width:420px){
+    #body{
+        background-color: rgb(228, 228, 228);
+    }
+    #main{
+        background-color: rgb(228, 228, 228);
+        background-image: none;
+        padding: 0;
+    }
+    #main-form{
+        width: 100%;
+        background-color: rgba(37, 122, 201, 0.8);
+        min-width: 320px;
+        border-radius: 0;
+        padding: 0;
+        border: none;
+    }
+}

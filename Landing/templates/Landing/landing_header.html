@@ -1,0 +1,53 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'Landing/css/index/landing_header.css' %}">
+<section id="header">
+    <div class="header-item" id="header-left">
+        <a href=""><img src="{% static 'Landing/images/twit.png' %}"  width="25" alt=""></a>
+        <a href=""><img src="{% static 'Landing/images/facebook.png' %}" width="25" alt=""></a>
+    </div>
+    <!-- <a class="header-link" href="/loginpage">Login</a> -->
+    <ul class="header-item" id="header-right"> 
+        <li><p  class="header-link">New here?</p></li>
+        <li><a class="header-link" href="/registration/">Register</a></li>
+    </ul>
+</section>
+
+<section id="header-info">
+    <div class="header-info-inner" id="header-info-left">
+        <a href="/"><img id="logo" src="{% static 'Landing/images/logo.png' %}" alt=""></a>
+        <div id="hamburger" onclick='drop_and_up()'><img src="{% static 'Landing/images/menu.png' %}" width="30px" alt=""></div>
+    </div>
+    <div class="header-info-inner header-info-right hide">
+        <!-- <div class="header-info-right-inner display-img"><a href="">one</a></div>
+        <a class="display-heading"  href="">one</a>
+        <div class="header-info-right-inner display-img"><a href="">two</a></div>
+        <a class="display-heading"  href="">two</a> -->
+        <div class="header-info-right-inner display-img">
+            <a   href="/patientlogin">
+                <img width="25px" src="{% static 'Landing/images/nav2.png' %}" alt="">
+            </a>
+        </div>
+        <a class="display-heading"  href="/patientlogin">Patient Login</a>
+        <div class="header-info-right-inner display-img">
+            <a  href="/management">
+                <img width="25px" src="{% static 'Landing/images/nav3.png' %}" alt="">
+            </a>
+        </div>
+        <a class="display-heading"  href="/management">Admin</a>
+    </div>
+    <script>
+        var body=document.getElementById('header')
+var h_info=document.getElementsByClassName('header-info-right')[0]
+
+body.onclick=()=>{
+    if(h_info.classList.contains('not-hide')){
+        drop_and_up()
+    }
+}
+
+function drop_and_up(){
+    h_info.classList.toggle('hide')
+    h_info.classList.toggle('not-hide')
+}
+    </script>
+</section>

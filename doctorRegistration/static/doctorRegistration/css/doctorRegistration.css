@@ -1,0 +1,73 @@
+
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    margin: 0;
+    background: url('/static/doctorRegistration/images/bg_color.png');
+}
+
+#doctor-registration{
+    height: 100vh;
+    background: url('/static/doctorRegistration/images/bg_color.png');
+}
+
+
+
+
+
+#doctor-registration-content{
+    width: 320px;
+    background-color: rgb(86, 165, 245);
+    border: 1px solid rgb(32, 101, 172);
+    border-radius: 10px;
+    margin: 20px auto;
+    color: rgb(42, 101, 172);
+    overflow: hidden;
+    /* padding: 20px 0; */
+}
+
+/* #doctor-registration-content >form{
+    width: fit-content;
+}
+*/
+.doctor-registration-input{
+    padding: 10px;
+    width: 100%;
+} 
+
+
+.doctor-registration-input > p{
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.doctor-registration-input > input,select{
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    width:100%;
+    border-radius: 5px;
+    border: 1px solid rgb(31, 101, 172);
+}
+
+::placeholder,.doctor-registration-input > select{ 
+    color: rgb(31, 101, 172);
+}
+
+.btn{
+    text-align: center;
+}
+
+.btn > button{
+    color: white;
+    font-size: 1.1rem;
+    padding:5px 15px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(32, 101, 172);
+}

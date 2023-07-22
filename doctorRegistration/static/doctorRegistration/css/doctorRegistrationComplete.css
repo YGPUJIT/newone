@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    background: url('/static/doctorRegistration/images/bg_color.png');
+    color:white;
+}
+
+*{
+    /* box-sizing: border-box; */
+    font-family: sans-serif;
+}
+
+#rc{
+    padding: 5%;
+    text-align: center;
+    color: white;
+}
+
+#rc h3{
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(86, 165, 245);
+}
+
+#content{
+    padding: 40px;
+    width: 360px;
+    background-color: rgb(86, 165, 245);
+    border-radius: 20px;
+    border: 1px solid white;
+    /* max-width: 320px; */
+    margin: auto;
+}
+
+.text{
+    text-align: justify;
+}
+
+.small{
+    font-size: 0.8rem;
+}
+
+/* #rc{
+
+} */

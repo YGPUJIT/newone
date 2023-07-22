@@ -1,0 +1,100 @@
+body{
+    background-color: rgb(35, 120, 198,0.8);
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#login-outer{
+    display: flex;
+    height: calc(100vh - 120px);
+    padding: 0 20px 0 20px;
+    align-items: center;
+    background-image: url('/static/Landing/images/hospital_bg.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#login{
+    min-width: 360px;
+    margin-left: auto;
+    text-align:left;
+    padding: 10px 25px 15px 25px;
+    background: rgb(35, 120, 198,0.8);
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+}
+
+#login >h4{
+    text-align: center;
+}
+
+.label{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.text-box{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding:0px 10px ;
+}
+
+#text{
+    margin: 5px 0;
+}
+
+
+#login-submit{
+    display: block;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 17px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(35, 120, 198);
+    border-radius: 10px;
+    margin: auto;
+}
+
+
+
+@media only screen and (max-width: 720px){
+    #login-outer{
+        min-height:100vh;
+        background-position: right;
+        padding: 0 20px;
+    }
+    #login{
+        margin: auto;
+    }
+}
+
+
+@media only screen and (max-width: 420px){
+    #login-outer{
+        min-height: calc(100vh - 100px);
+        background-position: right;
+        padding: 0 10px;
+    }
+
+    #login{
+        min-width: 100%;
+    }
+}

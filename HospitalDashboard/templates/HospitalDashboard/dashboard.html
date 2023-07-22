@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HospitalDashboard/css/dashboard/dashboard.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'HospitalDashboard/hospitalHeader.html' %}
+    <section id="content-hospital">
+        <div id="content-hospital-inner-topmost">
+            <div id="content-hospital-doctors" class="content-hospital-top">
+                <table class="content-hospital-top-table">
+                    <thead class="table-header-colour">
+                        <tr>
+                            <th>Doctors</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        {% for doc in doctors %}
+                            <tr class="url_name">
+                                <td>
+                                    <h4 id="docList-item-one"> <span>{{forloop.counter}}) </span> {{doc.Id}}-<span style="text-transform:uppercase;">{{doc.name}}</span></h4>
+                                </td>
+                                <td>
+                                    <a id="docList-item-two" href="doctorspage/{{doc.Id}}">CLick here to view the profile</a>
+                                </td>
+                            </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+            <div id="content-hospital-security" class="content-hospital-top">
+                <table class="content-hospital-top-table">
+                    <thead class="table-header-colour">
+                        <tr>
+                            <th>Pateints</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        {% for patient in patients %}
+                            <tr class="url_name">
+                                <td>
+                                    <h4 id="docList-item-one"> <span>{{forloop.counter}}) </span> {{patient.id}}-<span style="text-transform:uppercase;">{{patient.name}}</span></h4>
+                                </td>
+                                <td>
+                                    <a id="docList-item-two" href="patientspage/{{patient.id}}">CLick here to view the profile</a>
+                                </td>
+                            </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="content-hospital-inner-bottommost">
+            <table class="content-hospital-bottom-table">
+                <thead class="table-header-colour">
+                    <tr>
+                        <th>Protocol Breached</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body table-body-bottom">
+                    {% for obj in protocol %}
+                    <tr class="url_name">
+                        <td>
+                            <h4 id="docList-item-one"> Name: {{obj.name}} </span></h4>
+                        </td>
+                        <td>
+                            <h4 id="docList-item-one">ID: {{obj.pid}} </span></h4>
+                        </td>
+                        <td id="offence-list">
+                            {% for o in obj.time %}
+                                <p style="margin-left: 0;" id="docList-item-two"> Offence {{forloop.counter}} at time: {{o.time}}</p>
+                            {% endfor %}
+                        </td>
+                        <td class="pull-right">
+                            <button class="action-trigger" class="btn-color">Action</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="content-hospital-bottom-action">
+                 <div class="content-hospital-bottom-action-div">
+                     <h3 class="table-header-colour">Action</h3>
+                     <div class="action-content">
+                        <label style="color: rgb(32, 116, 198); font-weight: bold;" for="">Patient ID:</label>
+                        <input id="action-trigger-id" type="text" readonly>
+                        <br>
+                        <textarea id="textarea-action" name=""></textarea>
+                        <br>
+                        <button id="action-trigger-button" class="btn-color">Take Action</button>
+                     </div>
+                 </div>
+            </div>
+        </div>
+
+    </section>
+    {% include "Landing/footer.html" %}
+</body>
+<script src="{% static 'HospitalDashboard/js/dashboard.js' %}"></script>
+</html>

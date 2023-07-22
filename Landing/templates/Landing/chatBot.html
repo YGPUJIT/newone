@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'Landing/css/chatbot.css' %}">
+
+<section id="Chat-bot">
+    <div class="chat-bot-inner" id="chat-bot-inner">
+        <div id="chat-bot-open-close">
+            <p style="text-align: center;margin: 0;">VDoctor</p>
+            <span id="chat-bot-inner-x"></span>
+        </div>
+        <div id="chat-bot-content" class="display-none">
+            <div id="chat-bot-content-inner">
+            </div>
+            <div>
+                <input class="chat-box-send" type="text" name="char_bot_text" id="chat-bot-text" placeholder="Enter Message">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'Landing/js/chatbot.js' %}"></script>

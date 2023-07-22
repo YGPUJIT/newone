@@ -1,0 +1,27 @@
+
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#heading{
+    padding: 10px;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+#heading  h3{
+    margin: 0;
+}
+
+#logout{
+    margin-left: auto;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#logout:hover{
+    color: darkblue;
+}

@@ -1,0 +1,30 @@
+#doctor-home-header{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px;
+    border-bottom:2px solid white;
+    background: url('/static/doctorHome/images/bg_color.png');
+}
+
+
+#doctor-home-header-right{
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    list-style: none;
+}
+
+#doctor-home-header-right li{
+    padding: 0 10px;
+}
+
+#doctor-home-header-right li a{
+    text-decoration: none;
+    color: white;
+}
+
+#doctor-home-header-right li >a:hover{
+    color: darkblue;
+}

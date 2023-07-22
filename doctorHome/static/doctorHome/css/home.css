@@ -1,0 +1,264 @@
+body{
+    padding: 0;
+    margin: 0;
+    /* background-color: rgb(84, 155, 214); */
+}
+
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans','sans-serif';
+}
+
+.caps{
+    text-transform: uppercase;
+}
+
+
+
+#appontements-contents-total{
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+    background:url('/static/doctorHome/images/bg_color.png');
+}
+
+#sort-by-patientlist{
+    display:flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 10px;
+}
+
+#appontements-contents-name{
+    padding: 10px;
+    background-color: #f1f1f1;
+    /* color: rgb(32, 118, 192); */
+    border-bottom: 2px solid rgb(32, 118, 192);
+}
+#appontements-contents-name h4{
+    margin: 0;
+    /* color: white; */
+}
+
+
+#appontements-contents-total-sortby{
+    margin-left: auto;
+}
+
+
+#flex-it{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#appontements-contents-patientlist{
+    width: 100%;
+    height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    align-self: flex-start;
+    justify-content: space-between;
+
+}
+
+
+
+.patient{
+    width: 300px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    align-self: flex-start;
+    background:url('/static/doctorHome/images/bg_color.png');
+}
+
+
+.patient-top{
+    display: flex;
+    height:100px;
+    border-bottom: 1px solid white;
+    /* align-items: center; */
+}
+
+.patient-top-left{
+    width: 33.3%;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 100%;
+    overflow: hidden;
+    border-width:0px ;
+}
+
+.patient-top-left-image{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.patient-top-right{
+    width: 69.66%;
+    margin: 10px;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.patient-top-right p{
+    margin: 5px;
+    font-size: 0.8rem;
+}
+
+
+.patient-bottom-address-date{
+    text-align: right;
+    border-bottom: 1px solid white;
+}
+
+.patient-bottom-address-date p{
+    margin: 3px;
+    font-size: 0.8rem;
+}
+
+
+.patient-bottom-button button{
+    box-sizing: border-box;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    /* margin: 5px; */
+    width: 100%;
+}
+
+.white{
+    color: white;
+}
+
+.patient-top-right-name{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.gray{
+    font-size: 0.7rem;
+    color: #e6e6e6;
+}
+
+#appontements-contents-patientlist{
+    border: 2px solid rgb(32, 118, 192);
+    min-height: 50vh;
+}
+
+
+#notification{
+    color: white;
+    width: 340px;
+    align-self: flex-start;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: url('/static/doctorHome/images/bg_color.png');
+    margin-left: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+
+#notification-content{
+    color: black;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0 5px;
+    height: 320px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    border: 2px solid rgb(32, 118, 192);
+    list-style: none;
+}
+
+#notification-content li{
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    /* color: rgb(32, 118, 192); */
+    background-color: white;
+    border-left: 2px solid rgb(32, 118, 192);
+    border-right: 2px solid rgb(32, 118, 192);
+    border-radius: 5px;
+}
+
+
+
+
+@media only screen and (max-width:1130px){
+    /* #flex-it{
+        flex-direction: column;
+    } */
+
+    #sort-by-patientlist{
+        width: 50%;
+        /* margin: auto; */
+
+    }
+
+    #appontements-contents-patientlist{
+        justify-content: center;
+    }
+
+    #notification{
+        width: 300px;
+        /* margin: auto; */
+    }
+}
+
+
+
+@media only screen and (max-width:730px){
+    #flex-it{
+        flex-direction: column;
+    }
+
+    #sort-by-patientlist{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 10px;
+
+    }
+
+    #notification{
+        width: 95%;
+        margin: auto;
+    }
+}
+
+
+#appontements-contents-patientlist::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  #appontements-contents-patientlist::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent; 
+    border-radius: 10px;
+  }
+   
+
+  #appontements-contents-patientlist::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+  }
+  
+
+  #appontements-contents-patientlist::-webkit-scrollbar-thumb:hover {
+    background: rgb(32, 118, 192); 
+  }
+

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'HomePatient/css/complaint.css' %}">
+    <title>Complaint</title>
+</head>
+<body>
+    {% include 'HomePatient/patientHeader.html' %}
+    <h4 id="grievance-complaint">COMPLAINT AND Grievance</h4>
+    <section id="complaint-body">
+        <form method="POST" id="complaint-body-inner" action="/home/complaint/{{patient.doctorAllocatedID}}">
+            <h3 id="head-complaint">Lodge Complaint</h3>
+            <p style="font-size: 0.9rem;">NOTE* Please write your griveance in detail.</p>
+            <textarea id="text-area" name="complaint-content" id="" cols="" rows="" placeholder="Type your Complaint here"></textarea>
+            <button id="complaint-btn" type="submit">Register Complaint</button>
+        </form>
+        <div id="complaint-body-notification">
+            <p>{{patient.complaint_notification}}</p>
+        </div>
+    </section>
+    {% include "Landing/footer.html" %}
+</body>
+<script src="{% static 'HomePatient/js/complaint.js' %}"></script>
+</html>

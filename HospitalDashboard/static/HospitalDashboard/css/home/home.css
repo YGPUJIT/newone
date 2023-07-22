@@ -1,0 +1,145 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+
+/* COntent of hospital */
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans','sans-serif';
+}
+
+#home-content{
+    box-sizing: border-box;
+    padding: 20px 10px;
+    background-color:white;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+
+#home-content-left{
+    box-sizing: border-box;
+    width: 65%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home-content-left-box{
+    margin: 10px 5px;
+    background-color: #f1f1f1;
+    color: white;
+    /* padding: 5px; */
+    cursor: pointer;
+    border: 2px solid rgb(39, 116, 198);
+}
+
+.home-content-left-box:hover{
+    color: lightgray;
+}
+
+.home-content-left-box img{
+    width: 200px;
+    height: 160px;
+}
+
+.home-content-left-box-title{
+    text-align: center;
+    background-color: rgb(39, 116, 198);
+}
+
+.home-content-left-box-title p{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+    margin:0;
+}
+
+
+#home-content-right{
+    box-sizing: border-box;
+    width: 30%;
+    border-radius: 10px;
+    margin: 10px 0px;
+    height: fit-content;
+    overflow-y: auto;
+    margin-left: auto;
+}
+
+
+#home-content-right>h4{
+    text-align: center;
+    background:url('/static/HospitalDashboard/images/bg_color.png') ;
+    color: white;
+    margin: 0;
+    padding: 5px;
+}
+
+#notification-content {
+    border-top: 1px solid black;
+    margin: 0;
+    overflow: hidden;
+    overflow-y:auto;
+    height: 350px;
+    border: 2px solid rgb(39, 116, 198);
+    padding: 20px;
+    color:rgb(39, 116, 198);
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: white;
+    background-position: center;
+    list-style: none;
+}
+
+#notification-content > li{
+    margin: 10px 0px;
+    padding: 5px 2px;
+    border: 1px solid rgb(39, 116, 198);
+    border-left: 5px solid rgb(39, 116, 198);
+    border-right: 5px solid rgb(39, 116, 198);
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px;
+    /* list-style: none; */
+}
+
+
+
+/* #notification-content > li::before{
+    content: '\2022';
+    color:rgb(42, 107, 180);
+    font-size: 1em;;
+    padding: 5px;
+} */
+
+
+.home-content-question-answer{
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background: url('/static/HospitalDashboard/images/bg_color.png');
+    margin-top: 10px;
+    width: 100%;
+    min-width: 320px;
+    border-radius:10px;
+    color: white;
+}
+
+
+.question h4{
+    margin: 0;
+    padding: 10px;
+}
+
+.answer a{
+    margin: 0;
+    padding: 10px;
+    color: white;
+}

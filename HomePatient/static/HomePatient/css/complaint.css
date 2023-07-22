@@ -1,0 +1,89 @@
+body{
+    padding: 0;
+    margin: 0;
+    /* background: url('/static/HomePatient/images/bg_color.png'); */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#grievance-complaint{
+    text-align: center; 
+    text-transform: uppercase;
+    margin:0px;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+}
+
+
+
+#complaint-body{
+    padding: 20px;
+    display: flex;
+    /* text-align: center; */
+}
+
+#complaint-body-inner{
+    background-color: white;
+    width: 60%;
+    display: flex;
+    /* align-items: center; */
+    align-self: flex-start;
+    flex-direction: column;
+    border: 2px solid rgb(32, 118, 192);
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+#complaint-body-inner p{
+    /* margin: 5px 0px; */
+    padding: 10px 5px;
+    margin: 0;
+}
+
+#complaint-body-inner h3{
+    /* margin: 5px 0px; */
+    margin: 0;
+}
+
+#complaint-body-inner button{
+    width: fit-content;
+    margin:auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(32, 118, 192);
+    border: 0px solid transparent;
+    color: white;
+    cursor: pointer;
+}
+
+#head-complaint{
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(32, 118, 192);
+}
+
+#complaint-body-notification{
+    width: 30%;
+    text-align: justify;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    margin-left:auto ;
+    min-height: 150px;
+    align-self: flex-start;
+}
+
+#text-area{
+    width: 100%;
+    border: 2px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+    height: 50vh;
+    color: black;
+}

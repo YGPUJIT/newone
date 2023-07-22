@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Landing/css/management/managementPage.css'%}">
+    <title>Document</title>
+</head>
+<body id="body">
+    {% include "landing/landing_header.html" %}
+    <section style="height: 80vh;">
+            <ul id="list">
+                <li>
+                    <a href="/hospitallogin">
+                        <img width="120" src="{% static 'Landing/images/management/hospitallogin.png' %}" alt="Hospital Login">
+                        Hospital Login</a>
+                </li>
+                <li >
+
+                    <a href="/hospital/registration">
+                        <img width="120" src="{% static 'Landing/images/management/hospitalRegistration.png' %}" alt="Hopital Registration">Hospital Registration</a>
+                </li>
+                <li>
+
+                    <a href="/doctorlogin">
+                        <img width="120" src="{% static 'Landing/images/management/doctorlogin.png' %}" alt="Doctor Login">
+                        Doctor Login</a>
+                </li>
+                <li>
+                    <a href="/Security/loginpage">
+                        <img width="120" src="{% static 'Landing/images/management/SecurityLogin.png' %}" alt="Security">
+                        Security Login</a>
+                </li>
+            </ul>
+    </section>
+    {% include "Landing/footer.html" %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'doctorRegistration/css/doctorRegistrationComplete.css' %}">
+    <title>Registration complete</title>
+</head>
+<body>
+    {% include 'doctorRegistration/doctorHeader.html' %}
+    <section id="rc">
+        <div id='content'>
+            <h3>Registration complete</h3>
+            <h5 class="text">Thanks for Registering with us.</h5>
+            <p class="text">Please check your email inbox for login ID, and also verify your email to complete the Registration.</p>
+            <p class="text small">*Note: Click on the home button on the top left corner to
+                go back to home page of hospital administration</p>
+        </div>
+    </section>
+</body>
+</html>

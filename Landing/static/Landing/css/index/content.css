@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans','sans-serif';
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    border: 1px solid rgb(58, 78, 255);
+    box-sizing: border-box;
+    background-color: rgb(246, 246, 250);
+    border-radius: 10px ;
+}
+
+
+#content-left{
+    display: flex;
+    width: 100%;
+    text-align: justify;
+    /* align-items: center; */
+    border-bottom:1px solid rgb(58, 78, 255);
+    box-sizing: border-box;
+}
+
+.content-left-inner{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#image{
+    /* padding: 10px; */
+    overflow: hidden;
+    text-align: center;
+}
+
+#content-left-inner-img{
+    width: 360px;
+    height: 320px;
+}
+
+.content-inner{
+    padding: 10px;
+}
+
+
+#gov_card{
+    background: url('/static/Landing/images/bg_color.png');
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.gov_card_inner{
+    border-radius: 10px;
+} 
+
+.gov_card_inner_img{
+    width: 320px;
+    height: 250px;
+    margin-left: 20px;
+    border-radius: inherit;
+}
+
+#check{
+    display: flex;
+    align-items: center;
+}
+
+#two{
+    margin-left: auto;
+    width: 200px;
+    /* padding: 5px; */
+    box-sizing: border-box;
+    flex-shrink: 1;
+}
+
+ #two > img{
+    width: 100%;
+}  
+
+#check > h4{
+    padding: 5px 20px;
+}
+
+
+@media only screen and (max-width:640px){
+    #content{
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0%;
+        border: none;
+    }
+    #content-left{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 10px 2px;
+        box-sizing: border-box;
+    }
+    .content-left-inner{
+        width: 100%;
+        padding: 10px;
+    }
+    #content-right{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #check{
+        display: block;
+        text-align: center;
+    }
+    #two{
+        display: none;
+    }
+}

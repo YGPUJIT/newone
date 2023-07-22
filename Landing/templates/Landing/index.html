@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushman Bharat</title>
+    <link rel="stylesheet" href="{% static 'Landing/css/index/content.css' %}">
+</head>
+<body id="body">
+    {% include "landing/landing_header.html" %}
+    <section id="content">
+        <div class="content-inner" id="content-left">
+            <div class="content-left-inner">
+                <div id="check">
+                    <h4>Ministry of Health and Family Welfare, Government of India</h4>
+                    <div id="two"><img src="{% static 'Landing/images/health_logo.jpg' %}" alt=""></div>
+                </div>
+                <p>The purpose of this project is to enhance the medical services that can be availed to patients by 
+                    decreasing response time spent in diagnosis and allocation of resources for their treatment. 
+                    Currently, people experiencing health problems need to check in to some health care center, get 
+                    diagnosed and need to find the right place for treatment by themselves, if suitable resources 
+                    aren’t available right off the bat. 
+                </p>
+                 <p>   The proposed system aids the diagnosis by the means of an AI powered first responder chatbot, 
+                    predicting potential ailments based on its symptoms, contacting relevant doctors and making 
+                    necessary arrangements by directing patients to proper health care facilities, thereby saving 
+                    valuable time and efficiently prioritizing medical response to patients, alongside providing 
+                    real-time, face recognition-based patient security to concerned hospital management.</p>
+            </div>
+            <div class="content-left-inner" id="image">
+                <img id="content-left-inner-img" src="{% static 'Landing/images/india_health.png' %}" alt="">
+            </div>
+        </div>
+        <div class="content-inner" id="content-right">
+            <div id="content-right-inner">
+                <div id="content-right-inner-top">
+                    <span>X</span>
+                    <span>What can de done?</span>
+                </div>
+                <ul id="content-right-inner-bottom">
+                    <li>You will be assigned to the hospital, based on your current location</li>
+                    <li>You can just present the ID to obtain the medical supplies</li>
+                    <li>Everything will be monitored by a robust security system</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="gov_card">
+            {% for i in images %}
+            <div class="gov_card_inner">
+                <img class="gov_card_inner_img" src="{{ i }}" alt="">
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% include "landing/chatBot.html" %}
+    {% include "Landing/footer.html" %}
+</body>
+<script src="{% static 'Landing/js/index/index.js' %}"></script>
+</html>

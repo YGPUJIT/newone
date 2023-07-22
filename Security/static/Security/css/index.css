@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+}
+
+
+#security-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(32, 118, 192);
+    color: white;
+}
+
+
+.security-main-inner{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+
+.security-main-inner-top{
+    height: 50vh;
+    border-bottom: 1px solid black;
+}
+
+
+
+#demo{
+    padding: 5px 10px 5px 10px;
+}
+
+#controller{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+#video{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.person-info{
+    border: 1px solid black;
+    padding: 5px;
+    margin-top:10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+
+#patient-search{
+    display: inline-block;
+    width: 80%;
+    padding: 5px;
+}
+
+
+#security-main-inner-search{
+    padding: 10px;
+}
+
+#security-main-inner-information{
+    padding: 10px;
+    border-top: 1px solid black;
+    overflow: auto;
+}
+
+#information-inner{
+    padding: 5px;
+    background-color: rgb(32, 118, 192);
+}
+
+#information-inner p{
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: black;
+}
+#information-inner img{
+    display: block;
+    width: 200px;
+    height: 180px;
+    margin: auto;
+}
+
+#searchBtn{
+    display: inline;
+    padding: 5px;
+    width: 17%;
+}
+
+#searchLabel{
+    display: block;
+}
+
+
+.security-main-inner-bottom{
+    /* background-color: white; */
+    /* min-height: 00px; */
+    text-align: left;
+    padding: 10px;
+    overflow: auto;
+}
+
+
+.alert-official-class{
+    display: block;
+    color: white;
+    background-color: rgb(32, 118, 192);
+    padding: 10px 20px;
+    margin-left:auto ;
+}
+
+
+.pullright{
+    display: block;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+

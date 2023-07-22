@@ -1,0 +1,107 @@
+
+*{
+    box-sizing: border-box;
+} 
+
+footer {
+    background: url('/static/Landing/images/bg_color.png');
+    padding: 20px 10px;
+}
+
+
+#footer-names{
+    color: white;
+    margin: 10px 0;
+}
+
+
+#footer-names-guide h3,p{
+    margin: 5px 0;
+}
+
+
+#footer-names-student h3,p{
+    margin: 5px 0;
+}
+
+
+
+.title{
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: fit-content;
+    color: rgb(34, 113, 182);
+}
+
+
+#footer-icon{
+    /* width: 50%; */
+    display: flex;
+    align-items: flex-start;
+    /* padding: 10px; */
+}
+
+#footer-icon h3{
+    margin: 5px 0;
+}
+
+#jss-logo{
+    text-align: center;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#vtu-logo{
+    text-align: center;
+    margin-left: auto;
+    border-radius: 10px;
+    overflow: hidden;
+} 
+
+/* #footer-names {
+    margin-left:10px;
+} */
+
+#footer-icon  img{
+    border-radius: 10px;
+    width: 100px;
+    margin: auto;
+    background-color: #f1f1f1;
+}
+
+
+#space{
+    height: 25px;
+    background-color: #f1f1f1;
+}
+
+.names{
+    background-color: #f1f1f1;
+    color: rgb(34, 113, 182);
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.footer-title{
+    margin: 0;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+.teacher-names{
+    color: maroon;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.student-names{
+    padding: 5px 10px;
+    color: maroon;
+    border-radius: 5px;
+    background-color: lightgray;
+}

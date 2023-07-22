@@ -1,0 +1,19 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'HospitalDashboard/css/hospitalheader/hospitalHeader.css' %}">
+
+<nav id="header">
+    <div id=header-top>
+        <p>Hospital Dashboard</p>
+    </div>
+    <div id="header-bottom">
+        <a href="/hospital/home" id="header-bottom-left"><img width="50px" src="{% static 'HospitalDashboard/images/hospital_logo.png' %}" alt=""></a>
+        <ul id="header-bottom-right">
+            <li> <a href="/hospital/home">Home</a></li>
+            <li> <a href="/hospital/dashboard">Dashboard</a></li>
+            <li> <a href="/hospital/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+

@@ -1,0 +1,31 @@
+var form=document.getElementById('form')
+var button=document.getElementById('login-submit')
+form.addEventListener('submit',sendData)
+// button.addEventListener('click',()=>{
+//     button.disabled=true;
+// })
+// console.log('inin')
+function sendData(e){
+    button.disabled=true;
+    var f=document.getElementById('form')
+    var data=new FormData(form)
+    console.log(data)
+    var http=new XMLHttpRequest()
+    http.onreadystatechange=function(){
+        if(http.status==200 && http.readyState==4){
+            var bool=this.responseText
+            console.log(bool)
+            if(bool.toUpperCase()=='True'.toUpperCase()){
+                f.submit()
+            }else{
+                var warning=document.getElementById('text')
+                warning.style.textAlign='center'
+                warning.innerHTML='Please check your details'
+                button.disabled=false;
+            }
+        }
+    }
+    http.open('post','doctorhome/loginValidate',true)
+    http.send(data)
+    e.preventDefault()
+}

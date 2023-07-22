@@ -1,0 +1,16 @@
+<form id="patient-details" action="/home/allocateDoctor" method="POST">
+    <div class="patient-details-top">
+        <h4>Hello, {{patient.first_name}} {{patient.last_name}}</h4>
+        <p>Please explain your condition in detail.</p>
+    </div>
+    <div id="textarea">
+        <textarea style="width: 100%;"  name="condition" value="" id="" cols="" rows="300" placeholder="Type Here"></textarea>
+    </div>
+    <div class="patient-details-top">
+        <p style="font-size: 0.8rem;">NOTE* You will be allocated to a doctor, after you click <strong>UPDATE AND ALLOCATE</strong> button. 
+            Further process will be intimated to you shortly.</p>
+    </div>
+    <div id="update-allocate-btn">
+        <button>Update and allocate</button>
+    </div>
+</form>

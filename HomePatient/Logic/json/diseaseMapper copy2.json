@@ -1,0 +1,107 @@
+{
+    "aids": [
+        "Infectious Disease"
+    ],
+    "hypothyroidism": [
+        "Endocrinologist"
+    ],
+    "psoriasis": [
+        "Dermatologist"
+    ],
+    "paralysis": [
+        "Neurologist"
+    ],
+    "gerd": [
+        "Gastroenterologist"
+    ],
+    "chicken pox": [
+        "Dermatologist"
+    ],
+    "dengue": [
+        "Infectious Disease"
+    ],
+    "hypoglycemia": [
+        "Diabetologist"
+    ],
+    "hyperthyroidism": [
+        "Endocrinologist"
+    ],
+    "acne": [
+        "Dermatologist"
+    ],
+    "fungal infection": [
+        "Dermatologist"
+    ],
+    "urinary tract infection": [
+        "Primary care provider"
+    ],
+    "hypertension": [
+        "Cardiologist"
+    ],
+    "varicose veins": [
+        "Phlebologist"
+    ],
+    "pneumonia": [
+        "Pulmonologist"
+    ],
+    "diabetes": [
+        "Diabetologist"
+    ],
+    "drug reaction": [
+        "Allergist"
+    ],
+    "tuberculosis": [
+        "Pulmonologist"
+    ],
+    "typhoid": [
+        "Infectious Disease"
+    ],
+    "allergy": [
+        "Allergist"
+    ],
+    "paroxysmal positional vertigo": [
+        "Otolaryngologist"
+    ],
+    "common cold": [
+        "Primary care provider"
+    ],
+    "chronic cholestasis": [
+        "Gastroenterology"
+    ],
+    "impetigo": [
+        "Dermatologist"
+    ],
+    "osteoarthristis": [
+        "Rheumatologist"
+    ],
+    "jaundice": [
+        "Gastroenterologist"
+    ],
+    "malaria": [
+        "Infectious Disease"
+    ],
+    "gastroenteritis": [
+        "Gastroenterologist"
+    ],
+    "migraine": [
+        "Neurologists"
+    ],
+    "peptic ulcer": [
+        "Gastroenterologist"
+    ],
+    "dimorphic hemmorhoids": [
+        "Primary care provider"
+    ],
+    "bronchial asthma": [
+        "Pulmonologist"
+    ],
+    "heart attack": [
+        "Cardiologist"
+    ],
+    "cervical spondylosis": [
+        "Orthopedic"
+    ],
+    "arthritis": [
+        "Rheumatologist"
+    ]
+}

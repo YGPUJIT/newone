@@ -1,0 +1,268 @@
+body{
+    padding: 0;
+    margin: 0;
+    /* background: url('/static/HomePatient/images/bg_color.png'); */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#main-body{
+    padding: 5px;
+    display: flex;
+}
+
+#main-body-left{
+    width: 60%;
+    padding: 20px;
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    border: 2px solid rgb(32, 118, 192);
+}
+
+#patient-details{
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.patient-details-top{
+    color: black;
+}
+
+#main-body-left h4,p{ 
+margin: 5px 0;
+}
+
+#main-body-right{
+    width: 30%;
+    align-self: flex-start;
+    margin-left: auto;
+}
+
+/* #textarea{
+    height:50vh;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid black;
+} */
+
+#textarea textarea{
+    padding: 20px;
+    font-size: 1.2rem;
+    height: 250px;
+    background-color: #f1f1f1;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+#update-allocate-btn{
+    text-align: center;
+    padding: 10px;
+}
+
+#update-allocate-btn button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(32, 118, 192);
+    border-width:0px ;
+    color: white;
+}
+
+
+#main-body-right-doctor{
+    display: flex;
+    /* align-items: center; */
+    min-height: 200px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    color: black;
+    border: 2px solid rgb(32, 118, 192);
+}
+
+#main-body-right-doctor-absent{
+    width: 250px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#main-body-right-doctor-absent p{
+    text-align: justify;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+#main-body-right-doctor-present{
+    /* padding: 10px; */
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    /* color: white; */
+    width: 100%;
+}
+
+#hospital-doctor-card-header{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 5px 0;
+    background: url('/static/HomePatient/images/bg_color.png');
+    color: white;
+}
+
+#main-body-right-map{
+    margin-top: 20px;
+    border: 2px solid rgb(32, 118, 192);
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#main-body-right-map-top{
+    background-color: #f1f1f1;
+}
+
+#main-body-right-map-top > iframe{
+    border: transparent;
+}
+
+#updates-doctor{
+    height: 200px;
+    overflow-y: auto;
+    /* padding: 10px; */
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+
+
+
+#updates-doctor li{
+    margin: 5px 0px;
+    border-bottom: 1px solid rgb(204, 202, 202);
+    padding: 10px;
+    /* width: 90%; */
+}
+
+#updates-pharmacy{
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.title{
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background: url('/static/HomePatient/images/bg_color.png');
+}
+
+#complaint{
+    text-align: right;
+}
+
+#complaint button{
+    padding: 10px 20px;
+    background: url('/static/HomePatient/images/bg_color.png');
+    border: 1px solid white;
+    text-decoration: none;
+    cursor: pointer;
+    margin:10px ;
+}
+
+#complaint button a{
+    text-decoration: none;
+    color: white;
+}
+
+#map-hospital{
+    color: white;
+    padding: 5px 0;
+    margin: 0;
+    background:rgb(32, 118, 192);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.medicine_li{
+    background-color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    list-style: none;
+    border-radius: 10px;
+}
+
+
+.medicine_li p{
+    margin: 5px 0;
+}
+
+.medicine_li  .med_name{
+    text-transform:uppercase;
+}
+
+#downloadPharma{
+    padding: 10px 15px;
+    width: fit-content;
+    margin-left: auto;
+}
+
+#downloadPharma a{
+    color: rgb(32, 118, 192);
+}
+
+/* .medicine_li  .med_usuage{
+    text-transform:capitalize;
+} */
+
+
+@media only screen and (max-width:940px){
+    #main-body{
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    #main-body-right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+    #main-body-right-doctor{
+        width: 50%;
+        margin: 5px;
+    }
+    #main-body-right-map{
+        width: 50%;
+        margin: 0;
+        background: #f1f1f1;
+        margin: 5px;
+    }
+
+    #main-body-left{
+        width: 100%;
+    }
+    #complaint{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:600px){
+    #main-body-right{
+        flex-direction: column;
+    }
+    #main-body-right{
+        padding: 0;
+    }
+    #main-body-right-doctor{
+        width: 100%;
+        margin: 5px 0;
+    }
+    #main-body-right-map{
+       display: none;
+    }
+}
+
+
